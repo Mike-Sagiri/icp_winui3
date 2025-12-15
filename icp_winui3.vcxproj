@@ -14,7 +14,7 @@
   <Import Project="packages\Microsoft.WindowsAppSDK.Base.1.8.250831001\build\native\Microsoft.WindowsAppSDK.Base.props" Condition="Exists('packages\Microsoft.WindowsAppSDK.Base.1.8.250831001\build\native\Microsoft.WindowsAppSDK.Base.props')" />
   <Import Project="packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.20250829.1\build\Microsoft.Windows.SDK.BuildTools.MSIX.props" Condition="Exists('packages\Microsoft.Windows.SDK.BuildTools.MSIX.1.7.20250829.1\build\Microsoft.Windows.SDK.BuildTools.MSIX.props')" />
   <PropertyGroup Label="Globals">
-    <ApplicationIcon>C:\Users\XJH\Downloads\keqing.ico</ApplicationIcon>
+    <ApplicationIcon>Your app icon</ApplicationIcon>
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
     <MinimalCoreWin>true</MinimalCoreWin>
@@ -100,7 +100,7 @@
     <ClCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\XJH\Downloads\许江环-2501213411\许江环-2501213411;C:\Users\XJH\Downloads\许江环-2501213411\许江环-2501213411\eigen\eigen-3.4.1;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OpenMPSupport Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</OpenMPSupport>
     </ClCompile>
   </ItemDefinitionGroup>
@@ -108,7 +108,7 @@
     <ClCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\XJH\Downloads\许江环-2501213411\许江环-2501213411;C:\Users\XJH\Downloads\许江环-2501213411\许江环-2501213411\eigen\eigen-3.4.1;$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir);$(GeneratedFilesDir);$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OpenMPSupport Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</OpenMPSupport>
     </ClCompile>
     <Link>
@@ -181,6 +181,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Readme.md">
+      <SubType>
+      </SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icp_winui3.rc" />
